@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>WEBSITE ĐẶT SÂN BÓNG ONLINE CHO SÂN A</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header><h1>Sân Bóng TQN</h1></header>
+    <div class="tong">
+      <div class="left"></div>
+      <div class="center">
+        <div class="a1">
+          <div class="header__title--logo">TQN <br />MEDIA</div>
+        </div>
+        <div class="timkiem">
+          <li>
+            <input
+              class="tim"
+              type="text"
+              placeholder="Hãy tìm lại chính bạn!"
+            />
+          </li>
+        </div>
+        <div class="thongbao" onmouseover="showUpdateMessage()" onmouseout="hideUpdateMessage()">
+          <a href="#"></a>
+          <span class="icon">
+            <ion-icon name="notifications-outline"></ion-icon>
+          </span>
+          <label>Thông báo</label>
+        </div>
+        
+        <div class="giohang" onmouseover="showUpdateMessage()" onmouseout="hideUpdateMessage()">
+          <span class="icon">
+            <ion-icon name="journal-outline"></ion-icon>
+          </span>
+          <label>Thanh toán</label>
+        </div>
+        
+        <div class="lichsu" onmouseover="showUpdateMessage1()" onmouseout="hideUpdateMessage1()">
+          <span class="icon">
+            <ion-icon name="bag-check-outline"></ion-icon>
+          </span>
+          <label>Lịch sử</label>
+        </div>
+        
+        <div class="taikhoan" onmouseover="showUpdateMessage()" onmouseout="hideUpdateMessage()">
+          <span class="icon">
+            <ion-icon name="person-circle-outline"></ion-icon>
+          </span>
+          <label>Tài khoản</label>
+        </div>
+        
+        <!-- Thông báo "Đang cập nhật" -->
+        <div id="message" class="message">Đang cập nhật...</div>
+        <div id="message1" class="message1">Bạn chưa đặt sân bên sân TQN kìa người đẹp...</div>
+        <div class="san">
+          <a href="Danhgia.html">Đánh giá</a>
+        </div>
+        <div class="lienhe">
+          <label>Liên hệ</label>
+        </div>
+        <div class="food">
+          <A href="food.html">Food</A>
+        </div>
+        <div class="datsan">
+          <a href="Datsan.html">Đặt sân và hủy sân</a>
+        </div>
+      </div>
+
+<!-- Checkbox điều khiển popup -->
+<input type="checkbox" id="toggle-popup" hidden>
+
+<!-- Checkbox điều khiển form login/register -->
+<input type="checkbox" id="toggle-form" hidden>
+
+<!-- Checkbox điều khiển form quên mật khẩu -->
+<input type="checkbox" id="toggle-forgot" hidden>
+
+<div class="right">
+    <!-- Nút mở popup -->
+    <label for="toggle-popup" class="btn-login">Đăng nhập</label>
+
+    <!-- Popup form -->
+    <div class="popup-form">
+        <!-- Nút đóng popup -->
+        <label for="toggle-popup" class="icon-close">✖</label>
+
+        <!-- Form đăng nhập -->
+        <div class="a">
+            <h2>Đăng nhập</h2>
+            <form>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Mật khẩu</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Nhớ mật khẩu</label>
+                    <a href="#">Quên mật khẩu</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                
+                <div class="login-register">
+                    <p>Chưa có tài khoản?
+                        <label for="toggle-form" class="register-link">Đăng ký</label>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Form đăng ký -->
+        <div class="b">
+            <h2>Đăng ký</h2>
+            <form>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Tên người dùng</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Mật khẩu</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Tôi đồng ý điều khoản</label>
+                </div>
+                <button type="submit" class="btn">Đăng ký</button>
+                <div class="login-register">
+                    <p>Đã có tài khoản?
+                        <label for="toggle-form" class="login-link">Đăng nhập</label>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+      </div>
+    </div>
+    <div class="noidung">
+      <h1>Danh sách các loại sân và bảng giá</h1>
+      <section class="courses">
+        <!-- Sân 1 -->
+        <article class="court" id="court1">
+          <figure>
+            <img src="bg/sân 1.png" alt="Sân 1" />
+            <figcaption>Sân 1</figcaption>
+          </figure>
+          <hgroup>
+            <h2>Sân 1</h2>
+            <h3>Sân 5 với 5</h3>
+            <p>
+              Sân 5 vs 5 là một loại sân bóng đá được thiết kế để chơi cho các đội
+              bóng với 5 cầu thủ mỗi đội, bao gồm cả thủ môn. Sân này có kích
+              thước nhỏ hơn so với sân bóng đá 11 người (sân tiêu chuẩn), thường
+              là khoảng từ 25m đến 42m chiều dài và từ 16m đến 25m chiều rộng.<br />
+              Một số đặc điểm nổi bật của sân 5 vs 5:<br />
+              Kích thước sân nhỏ: Do sân nhỏ hơn, tốc độ của trận đấu sẽ nhanh hơn
+              và đòi hỏi các cầu thủ phải có kỹ năng kiểm soát bóng và di chuyển
+              tốt. Không gian hạn chế: Cầu thủ phải làm việc nhanh chóng và sáng
+              tạo trong phạm vi không gian nhỏ, giúp tăng cường khả năng xử lý
+              tình huống nhanh.<br />
+              Luật chơi: Sân 5 vs 5 thường không có biên và không có góc (corner),
+              thay vào đó sẽ có những tình huống đá biên hoặc đá phạt khi bóng ra
+              ngoài sân. Hệ thống thay người linh hoạt giúp các đội duy trì tốc độ
+              trận đấu cao.<br />
+              Đặc điểm chiến thuật: Mặc dù có ít cầu thủ hơn, nhưng các chiến
+              thuật như pressing, phòng ngự chặt chẽ, và chuyển bóng nhanh vẫn rất
+              quan trọng. Sự phối hợp giữa các cầu thủ rất cần thiết vì không có
+              nhiều thời gian để nghĩ và phản ứng.<br />
+              Thời gian trận đấu: Thời gian chơi của sân 5 vs 5 thường ngắn hơn,
+              thường là 2 hiệp 15 phút hoặc 20 phút mỗi hiệp, với thời gian nghỉ
+              ngắn giữa hai hiệp.
+            </p>
+          </hgroup>
+        </article>
+  
+        <!-- Sân 2 -->
+        <article class="court" id="court2">
+          <figure>
+            <img src="bg/sân 2.png" alt="Sân 2" />
+            <figcaption>Sân 2</figcaption>
+          </figure>
+          <hgroup>
+            <h2>Sân 2</h2>
+            <h3>Sân 7 với 7</h3>
+            <p>
+              Sân 7 vs 7 là một dạng sân bóng đá dành cho các trận đấu với mỗi đội
+              gồm 7 cầu thủ, bao gồm cả thủ môn. Đây là một lựa chọn phổ biến
+              trong các giải đấu bóng đá phong trào và các trận đấu mini. So với
+              sân 11 người, sân 7 vs 7 có kích thước nhỏ hơn, nhưng vẫn đủ để các
+              đội thể hiện lối chơi tấn công và phòng ngự đầy đủ.<br />
+              Kích thước sân: Sân 7 vs 7 có kích thước nhỏ hơn sân 11 người nhưng
+              lớn hơn sân 5 người. Kích thước sân thường dao động từ 50m đến 65m
+              chiều dài và từ 30m đến 45m chiều rộng. Sân có hình chữ nhật với các
+              khu vực bao gồm vòng cấm, và có khung thành nhỏ hơn so với sân 11
+              người.<br />
+              Số lượng cầu thủ: Mỗi đội có 7 cầu thủ, bao gồm 1 thủ môn và 6 cầu
+              thủ trên sân. Các trận đấu có thể diễn ra với nhiều thay người linh
+              hoạt. Số lượng cầu thủ ít hơn giúp trận đấu không quá đông đúc,
+              nhưng vẫn giữ được sự tương tác và chiến thuật đa dạng.<br />
+              Thời gian trận đấu: Trận đấu thường có thời gian ngắn hơn so với các
+              trận sân 11 người, thường là 2 hiệp, mỗi hiệp từ 20 đến 25 phút, với
+              thời gian nghỉ giữa hiệp ngắn.<br />
+              Luật chơi: Tương tự như bóng đá 11 người, sân 7 vs 7 có các quy định
+              về phạt góc, phạt đền, và thẻ phạt. Tuy nhiên, biên thường được thay
+              thế bằng đá biên hoặc đá phạt. Đôi khi, sân 7 vs 7 không có các quy
+              định về việt vị, giúp trận đấu diễn ra nhanh hơn và ít bị gián
+              đoạn.<br />
+              Chiến thuật và lối chơi: Sân 7 vs 7 mang đến sự cân bằng giữa lối
+              chơi tấn công và phòng ngự. Các đội cần phải di chuyển nhanh, phối
+              hợp nhịp nhàng, và biết cách sử dụng không gian hiệu quả. Các chiến
+              thuật pressing, chuyền bóng nhanh, và tổ chức phòng ngự từ xa được
+              áp dụng thường xuyên để hạn chế không gian cho đối thủ.<br />
+              Khung thành và thủ môn: Khung thành của sân 7 vs 7 nhỏ hơn nhiều so
+              với sân 11 người, thường có kích thước khoảng 4m x 2m, giúp các trận
+              đấu diễn ra nhanh và có nhiều cơ hội ghi bàn. Thủ môn có vai trò
+              quan trọng, cần phải linh hoạt và có khả năng xử lý bóng tốt trong
+              không gian hẹp.
+            </p>
+          </hgroup>
+        </article>
+  
+        <!-- Sân 3 -->
+        <article class="court" id="court3">
+          <figure>
+            <img src="bg/2.webp" alt="Sân 3" />
+            <figcaption>Sân 3</figcaption>
+          </figure>
+          <hgroup>
+            <h2>Sân 3</h2>
+            <h3>Sân 9 với 9</h3>
+            <p>
+              Sân 9 vs 9 là một dạng sân bóng đá trong đó mỗi đội có 9 cầu thủ,
+              bao gồm cả thủ môn và 8 cầu thủ ra sân. Đây là lựa chọn phổ biến
+              trong các giải đấu phong trào hoặc những trận đấu không chính thức,
+              nơi các đội có thể phát huy được chiến thuật đa dạng mà không cần
+              đến số lượng cầu thủ quá lớn như sân 11 người.<br />
+              Các đặc điểm của sân 9 vs 9: Kích thước sân: Sân 9 vs 9 có kích
+              thước lớn hơn sân 8 vs 8 nhưng nhỏ hơn sân 11 người. Kích thước sân
+              thường dao động từ 60m đến 75m chiều dài và từ 45m đến 55m chiều
+              rộng. Sân 9 vs 9 tạo ra không gian rộng rãi đủ để các đội có thể
+              triển khai chiến thuật tấn công, phòng ngự linh hoạt mà không bị quá
+              đông đúc như sân 7 vs 7.<br />
+              Số lượng cầu thủ: Mỗi đội có 9 cầu thủ, bao gồm 1 thủ môn và 8 cầu
+              thủ ngoài sân. Việc có thêm cầu thủ so với các sân 7 vs 7 hay 8 vs 8
+              giúp các đội có nhiều lựa chọn trong việc tổ chức đội hình và triển
+              khai chiến thuật.<br />
+              Thời gian trận đấu: Trận đấu sân 9 vs 9 thường có thời gian kéo dài
+              từ 2 hiệp, mỗi hiệp khoảng 30 đến 35 phút, với thời gian nghỉ giữa
+              hiệp khoảng 10 đến 15 phút.<br />
+              Luật chơi: Sân 9 vs 9 có những quy định tương tự như bóng đá 11
+              người, như phạt góc, phạt đền, thẻ phạt và đôi khi là việt vị.<br />
+              Chiến thuật và lối chơi: Với số lượng cầu thủ vừa phải, sân 9 vs 9
+              cho phép các đội triển khai các chiến thuật tấn công, phòng ngự và
+              phản công linh hoạt.<br />Khung thành và thủ môn: Khung thành trên
+              sân 9 vs 9 có kích thước lớn hơn sân 8 vs 8 nhưng nhỏ hơn sân 11
+              người, với kích thước thường là khoảng 5m x 2m.<br />
+            </p>
+          </hgroup>
+        </article>
+  
+        <!-- Sân 4 -->
+        <article class="court" id="court4">
+          <figure>
+            <img src="bg/sân 9.webp" alt="Sân 4" />
+            <figcaption>Sân 4</figcaption>
+          </figure>
+          <hgroup>
+            <h2>Sân 4</h2>
+            <h3>Sân 11 với 11</h3>
+            <p>
+              Sân 11 vs 11 là loại sân bóng đá tiêu chuẩn, dành cho các trận đấu
+              giữa hai đội bóng, mỗi đội gồm 11 cầu thủ (bao gồm 1 thủ môn và 10
+              cầu thủ trên sân).<br />
+              Kích thước sân: Sân bóng đá 11 vs 11 có kích thước tiêu chuẩn được
+              quy định bởi FIFA. Chiều dài sân thường từ 90m đến 120m và chiều
+              rộng từ 45m đến 90m.<br />
+              Số lượng cầu thủ: Mỗi đội gồm 11 cầu thủ, bao gồm 1 thủ môn và 10
+              cầu thủ thi đấu trên sân. Các cầu thủ thi đấu có thể chia thành các
+              vị trí như hậu vệ, tiền vệ và tiền đạo, với nhiều hệ thống chiến
+              thuật khác nhau như 4-3-3, 4-4-2, 3-5-2, tùy thuộc vào chiến lược
+              của huấn luyện viên.<br />
+              Thời gian trận đấu: Trận đấu sân 11 vs 11 thường được chia thành 2
+              hiệp, mỗi hiệp kéo dài 45 phút, với thời gian nghỉ giữa hiệp khoảng
+              15 phút.<br />
+              Luật chơi: Việt vị: Sân 11 vs 11 áp dụng luật việt vị, yêu cầu các
+              cầu thủ phải di chuyển chiến thuật và tổ chức tấn công một cách khéo
+              léo để tránh bị bắt việt vị....<br />
+              Chiến thuật và lối chơi: Sân 11 vs 11 yêu cầu sự phối hợp nhịp nhàng
+              và chiến thuật chặt chẽ, với nhiều lựa chọn tấn công và phòng ngự.
+              Các đội thường xây dựng chiến thuật theo hệ thống như 4-3-3, 4-4-2,
+              3-5-2, v.v. để tận dụng tối đa khả năng của từng cầu thủ.<br />
+              Khung thành và thủ môn: Khung thành tiêu chuẩn của sân 11 vs 11 có
+              chiều rộng 7,32m và chiều cao 2,44m. Thủ môn có vai trò quan trọng
+              trong việc bảo vệ khung thành và tham gia vào việc phát động tấn
+              công từ tuyến dưới.<br />
+            </p>
+          </hgroup>
+        </article>
+
+        <article class="court" id="court5">
+          <figure>
+      
+            <figcaption>Bảng giá sân và đồ ăn</figcaption>
+          </figure>
+          <hgroup>
+            <h1>Menu</h1>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th scope="col">Loại sân</th>
+                  <th scope="col">Giá</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Sân 1 (Sân 5 với 5)</th>
+                  <td>70k/1h</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sân 2(Sân 7 với 7)</th>
+                  <td>90k/1h</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sân 3(Sân 9 với 9)</th>
+                  <td>110k/1h</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sân 4(Sân 11 với 11)</th>
+                  <td>140k/1h</td>
+                </tr>
+              </tbody>
+              <tfoot></tfoot>
+            </table>
+          </hgroup>
+        </article>
+      </section>
+      </section>
+
+      <div class="buttons">
+        <button class="btn" data-target="court1">Sân 1</button>
+        <button class="btn" data-target="court2">Sân 2</button>
+        <button class="btn" data-target="court3">Sân 3</button>
+        <button class="btn" data-target="court4">Sân 4</button>
+        <button class="btn" data-target="court5">Giá</button>
+      </div>
+    </div>
+    <div class="siu1">
+      <div class="left2">
+        <div class="anh">
+          <img src="bg/3.jfif" alt="ảnh 1" />
+          <img src="bg/6.jfif" alt="ảnh 2" />
+          <img src="bg/1.jpg" alt="ảnh 3" />
+          <img
+            src="bg/pngtree-soccer-stadium-with-field-background-image_669049.jpg"
+            alt="ảnh 4"
+          />
+        </div>
+      </div>
+      <div class="right2">
+        <div class="top-right"></div>
+        <div class="bottom-right"></div>
+      </div>
+    </div>
+    <div class="danhgia">
+      <div class="tieude">
+        <h1>Đánh giá của khách hàng</h1>
+        <div class="user-info">
+          <img src="bg/meme3.webp" alt="ảnh" />
+          <p>Anh Mặt Ngầu</p>
+        </div>
+        <p class="review-text">
+          Sản phẩm ở đây thật là tuyệt, chúng khiến tôi được là chính mình, tôi
+          đã được tận hưởng một cảm giác thật là YO Mot!!!
+        </p>
+        <div class="rating">
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+        </div>
+      </div>
+      <div class="tieude">
+        <h1>Đánh giá của khách hàng</h1>
+        <div class="user-info">
+          <img src="bg/meme2.jpg" alt="ảnh" />
+          <p>Anh Mặt Ngầu</p>
+        </div>
+        <p class="review-text">
+          Sản phẩm ở đây thật là tuyệt, chúng khiến tôi được là chính mình, tôi
+          đã được tận hưởng một cảm giác thật là YO Mot!!!
+        </p>
+        <div class="rating">
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+        </div>
+      </div>
+      <div class="tieude">
+        <h1>Đánh giá của khách hàng</h1>
+        <div class="user-info">
+          <img src="bg/meme1.jpg" alt="ảnh" />
+          <p>Anh Mặt Ngầu</p>
+        </div>
+        <p class="review-text">
+          Sản phẩm ở đây thật là tuyệt, chúng khiến tôi được là chính mình, tôi
+          đã được tận hưởng một cảm giác thật là YO Mot!!!
+        </p>
+        <div class="rating">
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+        </div>
+      </div>
+    </div>
+        <div id="rank--title" class="commentTitle">BẢNG XẾP HẠNG</div>
+        <section class="rank--container ">
+             <div class="rank rankMonths">
+                  <div class="rank__header rankMonths__header"> MONTHLY RANK</div>
+                  <div class="rank__contents">
+                       <div class="rank__content rank__content--months">
+                            <div class="rank__content--level monthsLevel"><i class="fa-solid fa-1"></i></div>
+                            <div class="rank__content--name">Trần Quốc Nghĩa</div>
+                       </div>
+                       <div class="rank__content rank__content--months">
+                            <div class="rank__content--level monthsLevel">
+                                 <i class="fa-solid fa-2"></i>
+                            </div>
+                            <div class="rank__content--name">Nguyễn Tâm Bình</div>
+                       </div>
+                       <div class="rank__content rank__content--months">
+                            <div class="rank__content--level monthsLevel">
+                                 <i class="fa-solid fa-3"></i>
+                            </div>
+                            <div class="rank__content--name">Trương Thị Thịnh</div>
+                       </div>
+                  </div>
+                  <div class="rankTrophy TrophyMonths">
+                       <i class="fa-solid fa-trophy"></i>
+                  </div>
+             </div>
+             <div class="rank rankWeeks">
+                  <div class="rank__header rankWeeks__header">WEEKLY RANK</div>
+                  <div class="rank__contents">
+                       <div class="rank__content rank__content--weeks">
+                            <div class="rank__content--level weeksLevel"><i class="fa-solid fa-1"></i></div>
+                            <div class="rank__content--name">Trịnh Phan Anh Khoa</div>
+                       </div>
+                       <div class="rank__content rank__content--weeks">
+                            <div class="rank__content--level weeksLevel">
+                                 <i class="fa-solid fa-2"></i>
+                            </div>
+                            <div class="rank__content--name">Trần Quốc Nghĩa</div>
+                       </div>
+                       <div class="rank__content rank__content--weeks">
+                            <div class="rank__content--level weeksLevel">
+                                 <i class="fa-solid fa-3"></i>
+                            </div>
+                            <div class="rank__content--name">Nguyễn Thị Hoàng Thịnh</div>
+                       </div>
+                       <div class="rankTrophy TrophyWeeks">
+                            <i class="fa-solid fa-trophy"></i>
+                       </div>
+                  </div>
+             </div> 
+        </section>
+     </div> 
+      </div>
+    </div>
+    <div class="day">
+      <div class="column">
+        <h2>Về TQN MEDIA</h2>
+        <p>Giới thiệu</p>
+        <p>Hợp tác</p>
+      </div>
+      <div class="column">
+        <h2>CHÍNH SÁCH</h2>
+        <p>Chính sách bảo mật</p>
+        <p>Chính sách hỗ trợ</p>
+      </div>
+      <div class="column">
+        <h2>THÔNG TIN</h2>
+        <p>
+          <a href="http://tdmu.edu.vn/">Chính sách bảo mật</a>
+        </p>
+        <p>
+          <a href="https://www.facebook.com/nghia.tran.42663?mibextid=ZbWKwL"
+            >Địa chỉ liên hệ trực tiếp</a
+          >
+        </p>
+        <p>
+          <a href="http://tdmu.edu.vn/">Địa chỉ sân</a>
+        </p>
+      </div>
+      <div class="column">
+        <h2>CHĂM SÓC KHÁCH HÀNG</h2>
+        <p>cskh@TQNMEDIA.com</p>
+        <p>0372385182</p>
+      </div>
+    </div>
+    <div class="cuoi">
+    <div class="cuoitrang">
+      <p>KẾT NỐI VỚI CHÚNG TÔI</p>
+      <div class="youtube">
+        <span class="icon">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </span>
+        <label>Youtube</label>
+      </div>
+      <div class="tiktok">
+        <span class="icon">
+          <ion-icon name="logo-tiktok"></ion-icon>
+        </span>
+        <label>TikTok</label>
+      </div>
+      <div class="facebook">
+        <span class="icon">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </span>
+        <label>Facebook</label>
+      </div>
+    </div>
+
+
+    
+
+    <script src="main.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

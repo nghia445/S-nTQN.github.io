@@ -1,0 +1,774 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  background-image: url(bg/1.png);
+  color: rgb(240, 145, 145);
+  font-style: oblique;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding: 30px;
+  text-align: center;
+  margin-top: 0; /* Loại bỏ khoảng cách phía trên */
+  border: 1px solid #fcf8f8; /* Khung xung quanh header */
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.nav-items div {
+  color: #0f0d0d;
+}
+
+.a1,
+.timkiem,
+.thongbao,
+.giohang,
+.lichsu,
+.taikhoan {
+  color: rgb(11, 12, 13);
+  margin: 0px 20px 60px auto;
+  font-family: monospace;
+  font-size: 16px;
+
+  display: inline-block; /* Các mục này giờ sẽ nằm ngang */
+}
+a {
+  color: black; /* Thay đổi màu chữ của liên kết */
+  text-decoration: none; /* Xóa dấu gạch dưới */
+}
+.san,
+.lienhe,
+.food,
+.datsan {
+  display: inline-block;
+  margin: 0px 50px 10px auto;
+  color: white;
+}
+
+.thongbao:hover {
+  color: #d1083a;
+}
+.food:hover {
+  color: #5e1024;
+  background-color: tomato;
+}
+.san:hover {
+  color: #5e1024;
+  background-color: tomato;
+}
+.lienhe:hover {
+  color: #5e1024;
+  background-color: tomato;
+}
+.datsan:hover {
+  color: #5e1024;
+  background-color: tomato;
+}
+.giohang:hover {
+  color: #d1083a;
+}
+.lichsu:hover {
+  color: #d1083a;
+}
+.taikhoan:hover {
+  color: #d1083a;
+}
+.a1:hover {
+  color: aqua;
+}
+.lienhe {
+  background-color: #d6ddd6;
+  color: black;
+  padding: 13px 20px;
+  font-size: 14px;
+  border-radius: 100%;
+}
+.food {
+  background-color: #d6ddd6;
+  color: black;
+  padding: 13px 20px;
+  font-size: 13px;
+  border-radius: 100%;
+}
+.datsan {
+  background-color: #d6ddd6;
+  color: black;
+  padding: 13px 20px;
+  font-size: 14px;
+  border-radius: 100%;
+}
+.san {
+  background-color: #d6ddd6;
+  color: black;
+  padding: 13px 20px;
+  font-size: 15px;
+  border-radius: 100%;
+}
+.tong,
+.tong1 {
+  display: flex; /* Sử dụng Flexbox */
+  width: 100%; /* Chiều rộng container chiếm toàn bộ trang */
+  justify-content: space-between; /* Căn đều các phần tử trong container */
+  box-sizing: border-box; /* Bao gồm padding và border trong kích thước của phần tử */
+}
+
+.left,
+.right {
+  flex: 0.7; /* Phần tử bên trái và phải chiếm không gian dài và hẹp */
+  padding: 30px;
+  width: 50%;
+  text-align: center;
+
+  background-color: #4caf50;
+  border: 2px solid #fff;
+}
+
+.center {
+  flex: 2; /* Phần tử chính giữa sẽ chiếm nhiều không gian hơn */
+  padding: 36px;
+  text-align: center;
+  background-color: #12d2968b;
+  margin: 0 1px; /* Khoảng cách giữa các phần tử */
+}
+.noidung {
+  background-color: #999;
+  padding: 110px;
+  border: 1px solid #fff;
+}
+
+.siu1 {
+  display: flex;
+  height: 400px; /* Chiều cao toàn màn hình */
+  border: 1px solid #fff;
+}
+
+.left2 {
+  flex: 2; /* Phần trái chiếm nhiều không gian hơn */
+  padding: 20px;
+  border: 1px solid #fff;
+  background: cover;
+}
+
+.right2 {
+  flex: 1; /* Phần phải nhỏ hơn */
+  display: flex;
+  flex-direction: column; /* Xếp chồng lên nhau */
+  border: 1px solid #fff;
+}
+
+.top-right,
+.bottom-right {
+  flex: 1;
+  padding: 20px;
+  border: 5px solid #fff;
+}
+
+.top-right {
+  background-image: url(bg/3.jfif);
+  object-fit: contain; /* Giữ nguyên ảnh, có thể có khoảng trắng */
+  border: 8px solid #fff;
+  background: cover;
+}
+.top-right img {
+  max-width: 100%;
+  height: auto;
+}
+
+.bottom-right {
+  background-image: url(bg/7.jfif);
+  object-fit: contain; /* Giữ nguyên ảnh, có thể có khoảng trắng */
+  border: 8px solid #fff;
+  background: cover;
+}
+
+.danhgia {
+  text-align: center;
+  border: 5px solid #fff;
+}
+
+.danhgia h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.binhluan {
+  display: flex;
+  justify-content: space-around;
+}
+
+.circle {
+  width: 200px; /* Chiều rộng của khung tròn */
+  height: 100px; /* Chiều cao của khung tròn */
+  border-radius: 50px; /* Tạo hình tròn dài */
+  background-color: lightblue; /* Màu nền của khung tròn */
+  margin: 20px;
+}
+.rank {
+  text-align: center;
+  background-color: aqua;
+}
+
+.danhgia h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.day {
+  display: flex;
+  justify-content: space-around; /* Khoảng cách đều nhau giữa các cột */
+  width: 100%; /* Hoặc một giá trị phù hợp */
+  max-width: 1600px;
+  background-color: #15bcbc; /* Màu nền giống body */
+  padding: 20px;
+}
+
+.column {
+  text-align: left;
+  flex: 1; /* Chia đều không gian giữa các cột */
+  margin: 0 10px; /* Thêm khoảng cách ngang giữa các cột */
+}
+
+.column h2 {
+  color: #008080; /* Màu xanh két đậm */
+  margin-bottom: 10px;
+}
+
+.column p {
+  margin: 5px 0;
+  color: #2f4f4f; /* Màu xám đậm */
+  text-decoration: none; /* Loại bỏ gạch chân mặc định */
+  color: #2f4f4f;
+  transition: font-size 0.3s ease, text-decoration 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+}
+.column p:hover {
+  font-size: 1.2em; /* Phóng to chữ khi được nhấp */
+  text-decoration: underline; /* Gạch chân khi được nhấp */
+  color: #d1083a;
+}
+
+.cuoi {
+  padding: 50px;
+  background-color: #124e4e;
+  color: white;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.tim {
+  width: 150px;
+  height: 23px;
+  font-size: 14px;
+  border-radius: 20px;
+  transition: 0.9s ease-in-out;
+}
+.tim:focus {
+  border-color: rgb(221, 55, 55);
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.tim::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* Khuôn hình chứa slider */
+.left2 {
+  width: 400px; /* Kích thước khung */
+  height: 300px;
+  overflow: hidden;
+
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Đổ bóng */
+  position: relative;
+  border: 10px solid #fff;
+  border-radius: 50px;
+}
+
+/* Thanh trượt ảnh */
+.anh {
+  display: flex;
+  width: 1000px; /* Tổng chiều rộng = số ảnh * 600px */
+  animation: slide 10s infinite ease-in-out;
+  margin-top: 0;
+  height: 100px;
+}
+
+/* Ảnh bên trong slider */
+.anh img {
+  width: 600px;
+  height: 400px;
+  background: cover;
+}
+
+/* Hiệu ứng chuyển động */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-600px);
+  }
+  66% {
+    transform: translateX(-1200px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.left2 {
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+.tieude {
+  background-color: #4caf50;
+  padding: 15px;
+  border: 10px;
+}
+.left {
+  background-image: url(bg/4.jpg);
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Giữ nguyên ảnh, có thể có khoảng trắng */
+}
+
+.danhgia {
+  display: flex;
+  gap: 20px;
+}
+
+.review-card {
+  background-color: #e0ffff; /* Màu nền thẻ đánh giá */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.review-text {
+  margin-bottom: 10px;
+}
+
+.rating {
+  color: #ffd700; /* Màu vàng cho sao đánh giá */
+}
+
+.star {
+  font-size: 1.5em; /* Kích thước sao */
+}
+.right .Đangnhap {
+  padding: 10px;
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  color: #fff;
+
+  transition: 0.5s;
+}
+.right .Đangnhap:hover {
+  background-color: #008080;
+}
+.noidung h1 {
+  text-align: center;
+}
+
+/* Chỉnh khung chứa ảnh và nội dung */
+.courses {
+  align-items: center;
+  margin-left: 231px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Khung từng sân */
+.court {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 90%;
+  max-width: 900px;
+  transition: transform 0.3s ease;
+}
+/*Hiệu ứng khi click vào khung*/
+.court:hover {
+  transform: translateY(-10px);
+}
+/* Hình ảnh của sân */
+.court figure {
+  margin: 0;
+}
+
+.court img {
+  width: 100%;
+  height: auto;
+}
+
+/* Chú thích phần header của khung*/
+figcaption {
+  text-align: center;
+  font-weight: bold;
+  background-color: #20a0b7;
+  color: white;
+  padding: 5px;
+}
+
+/* Tiêu đề và mô tả sân */
+hgroup {
+  padding: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #501dcf;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Nút chuyển đổi giữa các sân */
+.buttons {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #925f19;
+}
+
+/* Ẩn các sân không được chọn */
+.court:not(.active) {
+  display: none;
+}
+
+.rank--container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tiêu đề của bảng xếp hạng */
+#rank--title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Cấu trúc chung của bảng xếp hạng */
+.rank {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 45%; /* Cho phép chúng chia đều không gian */
+  margin-bottom: 20px;
+}
+
+/* Tiêu đề bảng xếp hạng (tháng hoặc tuần) */
+.rank__header {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4caf50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Nội dung bảng xếp hạng */
+.rank__contents {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Mỗi mục trong bảng xếp hạng */
+.rank__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Mỗi cấp bậc (thứ hạng) */
+.rank__content--level {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+/* Các biểu tượng thứ hạng */
+.monthsLevel,
+.weeksLevel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 50%;
+  font-size: 16px;
+  margin-right: 10px; /* Khoảng cách giữa biểu tượng và tên */
+}
+
+/* Tên người chơi */
+.rank__content--name {
+  flex-grow: 1;
+  text-align: left;
+  font-size: 18px;
+  color: #555;
+}
+
+/* Biểu tượng huy chương */
+.rankTrophy {
+  font-size: 30px;
+  color: gold;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Hiệu ứng hover cho mỗi mục trong bảng xếp hạng */
+.rank__content:hover {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Tùy chỉnh màu sắc cho các vị trí đầu bảng */
+.rank__content--months:first-child .monthsLevel,
+.rank__content--weeks:first-child .weeksLevel {
+  background-color: #ffd700; /* Màu vàng cho vị trí đầu tiên */
+}
+
+.rank__content--months:nth-child(2) .monthsLevel,
+.rank__content--weeks:nth-child(2) .weeksLevel {
+  background-color: #c0c0c0; /* Màu bạc cho vị trí thứ 2 */
+}
+
+.rank__content--months:nth-child(3) .monthsLevel,
+.rank__content--weeks:nth-child(3) .weeksLevel {
+  background-color: #cd7f32; /* Màu đồng cho vị trí thứ 3 */
+}
+.court5 {
+  margin-right: 300px;
+}
+
+/* Khung popup */
+.popup-form {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  z-index: 999;
+}
+
+/* Hiện popup khi checkbox bật */
+#toggle-popup:checked ~ .right .popup-form {
+  display: block;
+}
+
+/* Nút đóng popup */
+.icon-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Nút đăng nhập */
+.btn-login {
+  padding: 15px;
+  background: #0984e3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 100px;
+}
+
+/* Form Đăng nhập & Đăng ký */
+.popup-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input-box label {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 14px;
+  color: #888;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: #0984e3;
+}
+
+/* Hiện form đăng nhập mặc định */
+.popup-form .a {
+  display: block;
+}
+
+.popup-form .b {
+  display: none;
+}
+
+/* Chuyển đổi giữa đăng nhập và đăng ký */
+#toggle-form:checked ~ .right .popup-form .a {
+  display: none;
+}
+
+#toggle-form:checked ~ .right .popup-form .b {
+  display: block;
+}
+
+/* Style cho các phần khác (checkbox, button, etc.) */
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.remember-forgot a {
+  color: #0984e3;
+}
+
+.login-register p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-register a {
+  color: #0984e3;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+  .box {
+    flex: 1 1 100%;
+  }
+}
+
+/* CSS cho thông báo "Đang cập nhật" */
+.message {
+  position: fixed;
+  top: 50%; /* Vị trí giữa màn hình theo chiều dọc */
+  left: 50%; /* Vị trí giữa màn hình theo chiều ngang */
+  transform: translate(-50%, -50%); /* Dịch chuyển để căn giữa chính xác */
+  color: red;
+  font-size: 30px;
+  font-style: italic;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  display: none; /* Mặc định ẩn đi */
+  z-index: 9999; /* Đảm bảo thông báo luôn ở trên */
+}
+
+/* Khi di chuột vào bất kỳ mục nào, hiển thị thông báo */
+.thongbao:hover ~ #message,
+.giohang:hover ~ #message,
+.taikhoan:hover ~ #message {
+  display: block; /* Hiển thị thông báo khi hover */
+}
+
+.lichsu:hover ~ #message1 {
+  display: block;
+}
+.message1 {
+  position: fixed;
+  top: 50%; /* Vị trí giữa màn hình theo chiều dọc */
+  left: 50%; /* Vị trí giữa màn hình theo chiều ngang */
+  transform: translate(-50%, -50%); /* Dịch chuyển để căn giữa chính xác */
+  color: red;
+  font-size: 30px;
+  font-style: italic;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  display: none; /* Mặc định ẩn đi */
+  z-index: 9999; /* Đảm bảo thông báo luôn ở trên */
+}
+.cuoi p {
+  color: white;
+}
